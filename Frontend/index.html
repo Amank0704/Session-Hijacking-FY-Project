@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: #0f0f0f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 420px;
+            padding: 40px 30px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #8b5cf6, #5eead4);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            text-align: center;
+        }
+
+        .container h1 {
+            color: white;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .input-box {
+            margin-bottom: 18px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 14px 18px;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .btn {
+            margin-top: 15px;
+        }
+
+        .btn button {
+            background: #4f46e5;
+            color: white;
+            padding: 12px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn button:hover {
+            background: #4338ca;
+        }
+
+        .message {
+            margin-top: 15px;
+            color: white;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>WELCOME PAGE</h1>
+
+    <div class="input-box">
+        <input type="text" id="username" placeholder="USERNAME">
+    </div>
+
+    <div class="input-box">
+        <input type="email" id="email" placeholder="EMAIL">
+    </div>
+
+    <div class="input-box">
+        <input type="password" id="password" placeholder="PASSWORD">
+    </div>
+
+    <div class="btn">
+        <button onclick="login()">LOG INN</button>
+    </div>
+
+    <div class="message" id="msg"></div>
+</div>
+
+<script>
+    function login() {
+        let username = document.getElementById("username").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let msg = document.getElementById("msg");
+
+        if (username === "" || email === "" || password === "") {
+            msg.textContent = "Please fill all fields!";
+        } else {
+            msg.textContent = "Login Successful ✔";
+        }
+    }
+</script>
+
+</body>
+</html>
